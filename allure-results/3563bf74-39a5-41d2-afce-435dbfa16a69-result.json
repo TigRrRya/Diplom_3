@@ -1,1 +1,158 @@
-{"uuid":"3563bf74-39a5-41d2-afce-435dbfa16a69","historyId":"3dd98ddff47e271470407fbade898e55","fullName":"RegisterTest.successfulRegistrationTest","labels":[{"name":"package","value":""},{"name":"testClass","value":"RegisterTest"},{"name":"testMethod","value":"successfulRegistrationTest"},{"name":"suite","value":"RegisterTest"},{"name":"host","value":"WIN-9GE4DGIL4JA"},{"name":"thread","value":"1676@WIN-9GE4DGIL4JA.main(1)"},{"name":"framework","value":"junit4"},{"name":"language","value":"java"}],"links":[],"name":"Проверка регистрации","status":"passed","stage":"finished","steps":[{"name":"Заполнить форму регистрации и зарегистрировать пользователя","status":"passed","stage":"finished","steps":[{"name":"Ввести имя: Wilburn","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"name","value":"Wilburn"}],"start":1759663023984,"stop":1759663024030},{"name":"Ввести email: felisha.smitham@gmail.com","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"email","value":"felisha.smitham@gmail.com"}],"start":1759663024030,"stop":1759663024059},{"name":"Ввести пароль","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"password","value":"tfsynrbz"}],"start":1759663024059,"stop":1759663024109},{"name":"Нажать кнопку Зарегистрироваться","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1759663024109,"stop":1759663024153}],"attachments":[],"parameters":[{"name":"name","value":"Wilburn"},{"name":"email","value":"felisha.smitham@gmail.com"},{"name":"password","value":"tfsynrbz"}],"start":1759663023983,"stop":1759663024153},{"name":"Логин пользователя через API: felisha.smitham@gmail.com","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"user","value":"User(email=felisha.smitham@gmail.com, password=tfsynrbz, name=Wilburn)"}],"start":1759663024676,"stop":1759663024973},{"name":"Удаление пользователя через API","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"accessToken","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTI1M2IwODJkN2VkMDAxYzUyMGZhZCIsImlhdCI6MTc1OTY2MzAyNCwiZXhwIjoxNzU5NjY0MjI0fQ.T4HYUjIprq2RJZyLZiExbgkrOmVcgSyZThdm6GqzGLM"}],"start":1759663024989,"stop":1759663025613}],"attachments":[],"parameters":[],"start":1759663021213,"stop":1759663025728}
+{
+  "uuid": "3563bf74-39a5-41d2-afce-435dbfa16a69",
+  "historyId": "3dd98ddff47e271470407fbade898e55",
+  "fullName": "RegisterTest.successfulRegistrationTest",
+  "labels": [
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": "RegisterTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "successfulRegistrationTest"
+    },
+    {
+      "name": "suite",
+      "value": "RegisterTest"
+    },
+    {
+      "name": "host",
+      "value": "WIN-9GE4DGIL4JA"
+    },
+    {
+      "name": "thread",
+      "value": "1676@WIN-9GE4DGIL4JA.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit4"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    }
+  ],
+  "links": [],
+  "name": "Проверка регистрации",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Заполнить форму регистрации и зарегистрировать пользователя",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Ввести имя: Wilburn",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "name",
+              "value": "Wilburn"
+            }
+          ],
+          "start": 1759663023984,
+          "stop": 1759663024030
+        },
+        {
+          "name": "Ввести email: felisha.smitham@gmail.com",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "email",
+              "value": "felisha.smitham@gmail.com"
+            }
+          ],
+          "start": 1759663024030,
+          "stop": 1759663024059
+        },
+        {
+          "name": "Ввести пароль",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "password",
+              "value": "tfsynrbz"
+            }
+          ],
+          "start": 1759663024059,
+          "stop": 1759663024109
+        },
+        {
+          "name": "Нажать кнопку Зарегистрироваться",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1759663024109,
+          "stop": 1759663024153
+        }
+      ],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "name",
+          "value": "Wilburn"
+        },
+        {
+          "name": "email",
+          "value": "felisha.smitham@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "tfsynrbz"
+        }
+      ],
+      "start": 1759663023983,
+      "stop": 1759663024153
+    },
+    {
+      "name": "Логин пользователя через API: felisha.smitham@gmail.com",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "user",
+          "value": "User(email=felisha.smitham@gmail.com, password=tfsynrbz, name=Wilburn)"
+        }
+      ],
+      "start": 1759663024676,
+      "stop": 1759663024973
+    },
+    {
+      "name": "Удаление пользователя через API",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "accessToken",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTI1M2IwODJkN2VkMDAxYzUyMGZhZCIsImlhdCI6MTc1OTY2MzAyNCwiZXhwIjoxNzU5NjY0MjI0fQ.T4HYUjIprq2RJZyLZiExbgkrOmVcgSyZThdm6GqzGLM"
+        }
+      ],
+      "start": 1759663024989,
+      "stop": 1759663025613
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1759663021213,
+  "stop": 1759663025728
+}

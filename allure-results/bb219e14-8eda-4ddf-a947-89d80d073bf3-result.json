@@ -1,1 +1,138 @@
-{"uuid":"bb219e14-8eda-4ddf-a947-89d80d073bf3","historyId":"f4dc6f30534b1aed13630431a1392cd3","fullName":"RegisterTest.invalidPasswordRegistrationTest","labels":[{"name":"package","value":""},{"name":"testClass","value":"RegisterTest"},{"name":"testMethod","value":"invalidPasswordRegistrationTest"},{"name":"suite","value":"RegisterTest"},{"name":"host","value":"WIN-9GE4DGIL4JA"},{"name":"thread","value":"1676@WIN-9GE4DGIL4JA.main(1)"},{"name":"framework","value":"junit4"},{"name":"language","value":"java"}],"links":[],"name":"Ошибка при коротком пароле","status":"passed","stage":"finished","steps":[{"name":"Заполнить форму регистрации и зарегистрировать пользователя","status":"passed","stage":"finished","steps":[{"name":"Ввести имя: Major","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"name","value":"Major"}],"start":1759663028383,"stop":1759663028429},{"name":"Ввести email: blanche.quitzon@gmail.com","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"email","value":"blanche.quitzon@gmail.com"}],"start":1759663028429,"stop":1759663028458},{"name":"Ввести пароль","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"password","value":"12345"}],"start":1759663028458,"stop":1759663028492},{"name":"Нажать кнопку Зарегистрироваться","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1759663028492,"stop":1759663028542}],"attachments":[],"parameters":[{"name":"name","value":"Major"},{"name":"email","value":"blanche.quitzon@gmail.com"},{"name":"password","value":"12345"}],"start":1759663028383,"stop":1759663028542},{"name":"Проверить сообщение ошибки для некорректного пароля","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1759663028542,"stop":1759663028559}],"attachments":[],"parameters":[],"start":1759663025728,"stop":1759663028645}
+{
+  "uuid": "bb219e14-8eda-4ddf-a947-89d80d073bf3",
+  "historyId": "f4dc6f30534b1aed13630431a1392cd3",
+  "fullName": "RegisterTest.invalidPasswordRegistrationTest",
+  "labels": [
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": "RegisterTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "invalidPasswordRegistrationTest"
+    },
+    {
+      "name": "suite",
+      "value": "RegisterTest"
+    },
+    {
+      "name": "host",
+      "value": "WIN-9GE4DGIL4JA"
+    },
+    {
+      "name": "thread",
+      "value": "1676@WIN-9GE4DGIL4JA.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit4"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    }
+  ],
+  "links": [],
+  "name": "Ошибка при коротком пароле",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Заполнить форму регистрации и зарегистрировать пользователя",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Ввести имя: Major",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "name",
+              "value": "Major"
+            }
+          ],
+          "start": 1759663028383,
+          "stop": 1759663028429
+        },
+        {
+          "name": "Ввести email: blanche.quitzon@gmail.com",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "email",
+              "value": "blanche.quitzon@gmail.com"
+            }
+          ],
+          "start": 1759663028429,
+          "stop": 1759663028458
+        },
+        {
+          "name": "Ввести пароль",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "password",
+              "value": "12345"
+            }
+          ],
+          "start": 1759663028458,
+          "stop": 1759663028492
+        },
+        {
+          "name": "Нажать кнопку Зарегистрироваться",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1759663028492,
+          "stop": 1759663028542
+        }
+      ],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "name",
+          "value": "Major"
+        },
+        {
+          "name": "email",
+          "value": "blanche.quitzon@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "12345"
+        }
+      ],
+      "start": 1759663028383,
+      "stop": 1759663028542
+    },
+    {
+      "name": "Проверить сообщение ошибки для некорректного пароля",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759663028542,
+      "stop": 1759663028559
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1759663025728,
+  "stop": 1759663028645
+}

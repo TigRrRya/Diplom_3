@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
+import java.time.Duration;
 
 public abstract class BaseTest {
     protected WebDriver driver;
@@ -14,6 +15,7 @@ public abstract class BaseTest {
         DriverHelper driverHelper = new DriverHelper();
         driver = driverHelper.initDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @After

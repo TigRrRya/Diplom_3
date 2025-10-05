@@ -3,7 +3,6 @@ package utils;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.json.JSONObject;
 import stellarburgers.model.User;
 
 
@@ -14,14 +13,9 @@ public class LoginAndDeleteUserApi {
 
     @Step("Регистрация пользователя через API: {user.email}")
     public static Response registerUser(User user) {
-        JSONObject body = new JSONObject();
-        body.put("email", user.getEmail());
-        body.put("password", user.getPassword());
-        body.put("name", user.getName());
-
         return RestAssured.given()
                 .header("Content-type", "application/json")
-                .body(body.toString())
+                .body(user) // Автоматическая сериализация
                 .post(AUTH_API + "register");
     }
 
@@ -34,13 +28,9 @@ public class LoginAndDeleteUserApi {
 
     @Step("Логин пользователя через API: {user.email}")
     public static Response loginUser(User user) {
-        JSONObject body = new JSONObject();
-        body.put("email", user.getEmail());
-        body.put("password", user.getPassword());
-
         return RestAssured.given()
                 .header("Content-type", "application/json")
-                .body(body.toString())
+                .body(user) // Автоматическая сериализация
                 .post(AUTH_API + "login");
     }
 }

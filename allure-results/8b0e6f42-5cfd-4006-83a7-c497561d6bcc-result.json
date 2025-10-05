@@ -1,1 +1,84 @@
-{"uuid":"8b0e6f42-5cfd-4006-83a7-c497561d6bcc","historyId":"e4702cca0e271cc195bd35a9670b0eb","fullName":"ConstructTest.fillingsVisibilityTest","labels":[{"name":"package","value":""},{"name":"testClass","value":"ConstructTest"},{"name":"testMethod","value":"fillingsVisibilityTest"},{"name":"suite","value":"ConstructTest"},{"name":"host","value":"WIN-9GE4DGIL4JA"},{"name":"thread","value":"1384@WIN-9GE4DGIL4JA.main(1)"},{"name":"framework","value":"junit4"},{"name":"language","value":"java"}],"links":[],"name":"Активация блока начинок и скрол до 1ой начинке в списке","status":"passed","stage":"finished","steps":[{"name":"Открыть главную страницу","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1759609152349,"stop":1759609154992},{"name":"Перейти во вкладку Начинки","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1759609154993,"stop":1759609156065},{"name":"Проверка видимости первого элемента в разделе","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"locator","value":"By.cssSelector: a[href='/ingredient/61c0c5a71d1f82001bdaaa6f']"}],"start":1759609156066,"stop":1759609156082}],"attachments":[],"parameters":[],"start":1759609151279,"stop":1759609156164}
+{
+  "uuid": "8b0e6f42-5cfd-4006-83a7-c497561d6bcc",
+  "historyId": "e4702cca0e271cc195bd35a9670b0eb",
+  "fullName": "ConstructTest.fillingsVisibilityTest",
+  "labels": [
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": "ConstructTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "fillingsVisibilityTest"
+    },
+    {
+      "name": "suite",
+      "value": "ConstructTest"
+    },
+    {
+      "name": "host",
+      "value": "WIN-9GE4DGIL4JA"
+    },
+    {
+      "name": "thread",
+      "value": "1384@WIN-9GE4DGIL4JA.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit4"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    }
+  ],
+  "links": [],
+  "name": "Активация блока начинок и скрол до 1ой начинке в списке",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Открыть главную страницу",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759609152349,
+      "stop": 1759609154992
+    },
+    {
+      "name": "Перейти во вкладку Начинки",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759609154993,
+      "stop": 1759609156065
+    },
+    {
+      "name": "Проверка видимости первого элемента в разделе",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "locator",
+          "value": "By.cssSelector: a[href='/ingredient/61c0c5a71d1f82001bdaaa6f']"
+        }
+      ],
+      "start": 1759609156066,
+      "stop": 1759609156082
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1759609151279,
+  "stop": 1759609156164
+}

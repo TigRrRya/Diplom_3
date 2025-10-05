@@ -18,6 +18,8 @@ public class PageConstruct {
     private final By bunsTab = By.xpath("//span[text()='Булки']");
     private final By saucesTab = By.xpath("//span[text()='Соусы']");
     private final By fillingsTab = By.xpath("//span[text()='Начинки']");
+
+
     private final By firstBunByHref = By.cssSelector("a[href='/ingredient/61c0c5a71d1f82001bdaaa6d']");
     private final By firstSauceByHref = By.cssSelector("a[href='/ingredient/61c0c5a71d1f82001bdaaa72']");
     private final By firstFillingByHref = By.cssSelector("a[href='/ingredient/61c0c5a71d1f82001bdaaa6f']");
@@ -27,44 +29,66 @@ public class PageConstruct {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    private void pause(int seconds) {
-        try {
-            Thread.sleep(seconds * 1000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+    @Step("Открыть главную страницу")
+    public void openPage() {
+        driver.get("https://stellarburgers.nomoreparties.site/");
     }
 
 
     @Step("Перейти во вкладку Булки")
     public void goToBuns() {
-        wait.until(ExpectedConditions.elementToBeClickable(bunsTab));
-        driver.findElement(bunsTab).click();
-        pause(1);
+        wait.until(ExpectedConditions.elementToBeClickable(bunsTab)).click();
     }
 
     @Step("Перейти во вкладку Соусы")
     public void goToSauces() {
-        wait.until(ExpectedConditions.elementToBeClickable(saucesTab));
-        driver.findElement(saucesTab).click();
-        pause(1);
+        wait.until(ExpectedConditions.elementToBeClickable(saucesTab)).click();
     }
 
     @Step("Перейти во вкладку Начинки")
     public void goToFillings() {
-        wait.until(ExpectedConditions.elementToBeClickable(fillingsTab));
-        driver.findElement(fillingsTab).click();
-        pause(1);
+        wait.until(ExpectedConditions.elementToBeClickable(fillingsTab)).click();
     }
 
-    @Step("Проверка видимости первого элемента в разделе")
+
+    @Step("Проверка видимости элемента")
     public boolean isElementVisible(By locator) {
         try {
-            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-            return element.isDisplayed();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            return true;
         } catch (TimeoutException e) {
             return false;
         }
+    }
+
+    private boolean isTabActive(By tabLocator) {
+        try {
+
+            WebElement tabElement = wait.until(ExpectedConditions.elementToBeClickable(tabLocator));
+
+            String classAttribute = tabElement.findElement(By.xpath("./..")).getAttribute("class");
+
+            return classAttribute.contains("tab_tab_type_current");
+
+        } catch (TimeoutException | NullPointerException e) {
+            return false;
+        }
+    }
+
+    @Step("Проверить, что вкладка Булки активна")
+    public boolean isBunsTabActive() {
+        return isTabActive(bunsTab);
+    }
+
+    @Step("Проверить, что вкладка Соусы активна")
+    public boolean isSaucesTabActive() {
+        return isTabActive(saucesTab);
+    }
+
+    @Step("Проверить, что вкладка Начинки активна")
+    public boolean isFillingsTabActive() {
+        return isTabActive(fillingsTab);
     }
 
     public boolean isFirstBunVisible() {
@@ -77,11 +101,5 @@ public class PageConstruct {
 
     public boolean isFirstFillingVisible() {
         return isElementVisible(firstFillingByHref);
-    }
-
-    @Step("Открыть главную страницу")
-    public void openPage() {
-        driver.get("https://stellarburgers.nomoreparties.site/");
-        pause(1);
     }
 }

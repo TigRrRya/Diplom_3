@@ -1,1 +1,84 @@
-{"uuid":"28e24c06-3ee2-4a08-914a-9fde22bc1304","historyId":"b6f1b285ead7c446f02d55fa7fe485e9","fullName":"ConstructTest.saucesVisibilityTest","labels":[{"name":"package","value":""},{"name":"testClass","value":"ConstructTest"},{"name":"testMethod","value":"saucesVisibilityTest"},{"name":"suite","value":"ConstructTest"},{"name":"host","value":"WIN-9GE4DGIL4JA"},{"name":"thread","value":"1384@WIN-9GE4DGIL4JA.main(1)"},{"name":"framework","value":"junit4"},{"name":"language","value":"java"}],"links":[],"name":"Активация блока соус и скрол до 1го соуса в списке","status":"passed","stage":"finished","steps":[{"name":"Открыть главную страницу","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1759609156801,"stop":1759609159623},{"name":"Перейти во вкладку Соусы","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1759609159623,"stop":1759609160679},{"name":"Проверка видимости первого элемента в разделе","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[{"name":"locator","value":"By.cssSelector: a[href='/ingredient/61c0c5a71d1f82001bdaaa72']"}],"start":1759609160679,"stop":1759609160693}],"attachments":[],"parameters":[],"start":1759609156207,"stop":1759609160774}
+{
+  "uuid": "28e24c06-3ee2-4a08-914a-9fde22bc1304",
+  "historyId": "b6f1b285ead7c446f02d55fa7fe485e9",
+  "fullName": "ConstructTest.saucesVisibilityTest",
+  "labels": [
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": "ConstructTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "saucesVisibilityTest"
+    },
+    {
+      "name": "suite",
+      "value": "ConstructTest"
+    },
+    {
+      "name": "host",
+      "value": "WIN-9GE4DGIL4JA"
+    },
+    {
+      "name": "thread",
+      "value": "1384@WIN-9GE4DGIL4JA.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit4"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    }
+  ],
+  "links": [],
+  "name": "Активация блока соус и скрол до 1го соуса в списке",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Открыть главную страницу",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759609156801,
+      "stop": 1759609159623
+    },
+    {
+      "name": "Перейти во вкладку Соусы",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759609159623,
+      "stop": 1759609160679
+    },
+    {
+      "name": "Проверка видимости первого элемента в разделе",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "locator",
+          "value": "By.cssSelector: a[href='/ingredient/61c0c5a71d1f82001bdaaa72']"
+        }
+      ],
+      "start": 1759609160679,
+      "stop": 1759609160693
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1759609156207,
+  "stop": 1759609160774
+}

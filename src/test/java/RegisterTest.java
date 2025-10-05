@@ -1,55 +1,63 @@
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Test;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import stellarburgers.model.User;
-import stellarburgers.page.PageLoginAndRegister;
+import stellarburgers.page.PageLogin;
+import stellarburgers.page.PageRegister;
 import utils.BaseTest;
 import utils.LoginAndDeleteUserApi;
 import utils.UserGenerator;
 
-import java.time.Duration;
-
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class RegisterTest extends BaseTest {
 
     private User user;
+    private boolean isUserRegistered = false;
     private String accessToken;
 
     @After
     public void cleanupUser() {
-        if (accessToken != null) {
-            LoginAndDeleteUserApi.deleteUser(accessToken);
+        if (user != null && isUserRegistered) {
+
+            Response response = LoginAndDeleteUserApi.loginUser(user);
+
+            if (response.statusCode() == 200) {
+                accessToken = response.path("accessToken");
+
+                if (accessToken != null) {
+                    LoginAndDeleteUserApi.deleteUser(accessToken);
+                }
+            }
         }
     }
 
     @Test
-    @DisplayName("Проверка регистрации")
+    @DisplayName("Успешная регистрация")
+    @Description("Проверяет, что пользователь может успешно зарегистрироваться с корректными данными и автоматически перенаправляется на страницу авторизации (логина).")
     public void successfulRegistrationTest() {
-        PageLoginAndRegister page = new PageLoginAndRegister(driver);
+        PageRegister page = new PageRegister(driver);
+        PageLogin pageLogin = new PageLogin(driver);
 
         user = UserGenerator.getValidUser();
 
         driver.get("https://stellarburgers.nomoreparties.site/register");
         page.register(user.getName(), user.getEmail(), user.getPassword());
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(page.loginButtonInAccount));
 
-        assertTrue("Кнопка 'Войти' не видна после регистрации",
-                !driver.findElements(page.loginButtonInAccount).isEmpty());
+        assertFalse("Кнопка 'Войти' не видна после регистрации", driver.findElements(pageLogin.loginButtonInAccount).isEmpty());
 
-        Response response = LoginAndDeleteUserApi.loginUser(user);
-        accessToken = response.path("accessToken");
+        isUserRegistered = true;
     }
 
     @Test
-    @DisplayName("Ошибка при коротком пароле")
+    @DisplayName("Ошибка с коротким паролем")
+    @Description("Проверяет, что при попытке регистрации с паролем менее 6 символов, система отображает сообщение об ошибке 'Некорректный пароль' и регистрация не происходит.")
     public void invalidPasswordRegistrationTest() {
-        PageLoginAndRegister page = new PageLoginAndRegister(driver);
+        PageRegister page = new PageRegister(driver);
 
         user = UserGenerator.getUserWithCustomPassword("12345");
 
@@ -59,6 +67,7 @@ public class RegisterTest extends BaseTest {
         assertTrue("Ошибка для некорректного пароля не отображается",
                 page.isPasswordErrorVisible());
 
-        accessToken = null;
+        isUserRegistered = false;
+        this.accessToken = null;
     }
 }
