@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LocatorsAndMethod {
+public class PageLoginAndRegister {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
@@ -17,17 +17,16 @@ public class LocatorsAndMethod {
     private final By nameInput = By.xpath("//label[text()='Имя']/following-sibling::input");
     private final By emailInput = By.xpath("//label[text()='Email']/following-sibling::input");
     private final By passwordInput = By.name("Пароль");
-    private final By passwordError = By.xpath("//p[text()='Некорректный пароль']");
+    private final By passwordErrorRegister = By.xpath("//p[text()='Некорректный пароль']");
     private final By registerButton = By.xpath("//button[text()='Зарегистрироваться']");
     private final By loginLink = By.linkText("Войти");
-    public final By loginButtonAfterRegistration = By.xpath("//button[text()='Войти']");
+    public final By loginButtonInAccount = By.xpath("//button[text()='Войти']");
     private final By loginButtonMain = By.xpath("//button[text()='Войти в аккаунт']");
-    private final By bunsTab = By.xpath("//span[text()='Булки']");
-    private final By saucesTab = By.xpath("//span[text()='Соусы']");
-    private final By fillingsTab = By.xpath("//span[text()='Начинки']");
+
+
     private final By userNameField = By.name("Name");
 
-    public LocatorsAndMethod(WebDriver driver) {
+    public PageLoginAndRegister(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
@@ -71,8 +70,8 @@ public class LocatorsAndMethod {
 
     @Step("Проверить сообщение ошибки для некорректного пароля")
     public boolean isPasswordErrorVisible() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordError));
-        return !driver.findElements(passwordError).isEmpty();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordErrorRegister));
+        return !driver.findElements(passwordErrorRegister).isEmpty();
     }
 
     @Step("Перейти в Личный Кабинет")
@@ -89,27 +88,20 @@ public class LocatorsAndMethod {
         clickRegister();
     }
 
-    @Step("Перейти во вкладку Булки")
-    public void goToBuns() {
-        wait.until(ExpectedConditions.elementToBeClickable(bunsTab));
-        driver.findElement(bunsTab).click();
+
+    @Step("Заполнить форму авторизации и войти")
+    public void login(String email, String password) {
+        enterEmail(email);
+        enterPassword(password);
+        wait.until(ExpectedConditions.elementToBeClickable(loginButtonInAccount));
+        driver.findElement(loginButtonInAccount).click();
     }
 
-    @Step("Перейти во вкладку Соусы")
-    public void goToSauces() {
-        wait.until(ExpectedConditions.elementToBeClickable(saucesTab));
-        driver.findElement(saucesTab).click();
-    }
-
-    @Step("Перейти во вкладку Начинки")
-    public void goToFillings() {
-        wait.until(ExpectedConditions.elementToBeClickable(fillingsTab));
-        driver.findElement(fillingsTab).click();
-    }
 
     // Для проверки входа
     @Step("Проверить успешный вход пользователя: {expectedName}")
     public boolean isLoginSuccessful(String expectedName) {
+        goToPersonalAccount();
         wait.until(ExpectedConditions.visibilityOfElementLocated(userNameField));
         String actualName = driver.findElement(userNameField).getAttribute("value");
         return expectedName.equals(actualName);

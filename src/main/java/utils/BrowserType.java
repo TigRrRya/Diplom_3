@@ -1,4 +1,4 @@
-package stellarburgers;
+package utils;
 
 public enum BrowserType {
     CHROME,
