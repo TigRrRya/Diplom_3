@@ -1,0 +1,36 @@
+package utils;
+
+import io.qameta.allure.Step;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import stellarburgers.model.User;
+
+
+public class LoginAndDeleteUserApi {
+
+    private static final String BASE_URL = "https://stellarburgers.nomoreparties.site";
+    private static final String AUTH_API = BASE_URL + "/api/auth/";
+
+    @Step("Регистрация пользователя через API: {user.email}")
+    public static Response registerUser(User user) {
+        return RestAssured.given()
+                .header("Content-type", "application/json")
+                .body(user) // Автоматическая сериализация
+                .post(AUTH_API + "register");
+    }
+
+    @Step("Удаление пользователя через API")
+    public static void deleteUser(String accessToken) {
+        RestAssured.given()
+                .header("Authorization", accessToken)
+                .delete(AUTH_API + "user");
+    }
+
+    @Step("Логин пользователя через API: {user.email}")
+    public static Response loginUser(User user) {
+        return RestAssured.given()
+                .header("Content-type", "application/json")
+                .body(user) // Автоматическая сериализация
+                .post(AUTH_API + "login");
+    }
+}

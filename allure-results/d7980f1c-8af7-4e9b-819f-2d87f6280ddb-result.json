@@ -1,0 +1,84 @@
+{
+  "uuid": "d7980f1c-8af7-4e9b-819f-2d87f6280ddb",
+  "historyId": "b6f1b285ead7c446f02d55fa7fe485e9",
+  "fullName": "ConstructTest.saucesVisibilityTest",
+  "labels": [
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": "ConstructTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "saucesVisibilityTest"
+    },
+    {
+      "name": "suite",
+      "value": "ConstructTest"
+    },
+    {
+      "name": "host",
+      "value": "WIN-9GE4DGIL4JA"
+    },
+    {
+      "name": "thread",
+      "value": "1676@WIN-9GE4DGIL4JA.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit4"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    }
+  ],
+  "links": [],
+  "name": "Активация блока соус и скрол до 1го соуса в списке",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Открыть главную страницу",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759662990543,
+      "stop": 1759662993706
+    },
+    {
+      "name": "Перейти во вкладку Соусы",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759662993706,
+      "stop": 1759662994757
+    },
+    {
+      "name": "Проверка видимости первого элемента в разделе",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "locator",
+          "value": "By.cssSelector: a[href='/ingredient/61c0c5a71d1f82001bdaaa72']"
+        }
+      ],
+      "start": 1759662994757,
+      "stop": 1759662994759
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1759662989964,
+  "stop": 1759662994879
+}

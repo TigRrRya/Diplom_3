@@ -1,0 +1,165 @@
+{
+  "uuid": "c6e986ed-2626-4077-b7e0-7a926915f321",
+  "historyId": "44918a9fd337b5febd656f50c1633d4f",
+  "fullName": "LoginTest.loginButtonInForgotPassword",
+  "labels": [
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": "LoginTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "loginButtonInForgotPassword"
+    },
+    {
+      "name": "suite",
+      "value": "LoginTest"
+    },
+    {
+      "name": "host",
+      "value": "WIN-9GE4DGIL4JA"
+    },
+    {
+      "name": "thread",
+      "value": "1676@WIN-9GE4DGIL4JA.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit4"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    }
+  ],
+  "links": [],
+  "name": "вход через кнопку Войти в форме восстановление пароля;",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Регистрация пользователя через API: thersa.kuhic@yahoo.com",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "user",
+          "value": "User(email=thersa.kuhic@yahoo.com, password=sq26ijcv, name=Jerrell)"
+        }
+      ],
+      "start": 1759663001442,
+      "stop": 1759663002571
+    },
+    {
+      "name": "Перейти на страницу логина",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759663004768,
+      "stop": 1759663004833
+    },
+    {
+      "name": "Заполнить форму авторизации и войти",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Ввести email: thersa.kuhic@yahoo.com",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "email",
+              "value": "thersa.kuhic@yahoo.com"
+            }
+          ],
+          "start": 1759663004833,
+          "stop": 1759663004879
+        },
+        {
+          "name": "Ввести пароль",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "password",
+              "value": "sq26ijcv"
+            }
+          ],
+          "start": 1759663004879,
+          "stop": 1759663004908
+        }
+      ],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "thersa.kuhic@yahoo.com"
+        },
+        {
+          "name": "password",
+          "value": "sq26ijcv"
+        }
+      ],
+      "start": 1759663004833,
+      "stop": 1759663004960
+    },
+    {
+      "name": "Проверить успешный вход пользователя: Jerrell",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Перейти в Личный Кабинет",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1759663004960,
+          "stop": 1759663005376
+        }
+      ],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "expectedName",
+          "value": "Jerrell"
+        }
+      ],
+      "start": 1759663004960,
+      "stop": 1759663005914
+    },
+    {
+      "name": "Удаление пользователя через API",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "accessToken",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTI1MzlhODJkN2VkMDAxYzUyMGY5ZiIsImlhdCI6MTc1OTY2MzAwMiwiZXhwIjoxNzU5NjY0MjAyfQ.4psWfQYs3tI6nvBJplYPCNd2xZdoUDiD2dDuifdjm_A"
+        }
+      ],
+      "start": 1759663005914,
+      "stop": 1759663006513
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1759663000744,
+  "stop": 1759663006656
+}

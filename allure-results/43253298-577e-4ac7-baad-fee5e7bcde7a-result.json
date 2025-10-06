@@ -1,0 +1,165 @@
+{
+  "uuid": "43253298-577e-4ac7-baad-fee5e7bcde7a",
+  "historyId": "9dab31b148037987208aea1c45dcac15",
+  "fullName": "LoginTest.loginPersonalAccount",
+  "labels": [
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": "LoginTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "loginPersonalAccount"
+    },
+    {
+      "name": "suite",
+      "value": "LoginTest"
+    },
+    {
+      "name": "host",
+      "value": "WIN-9GE4DGIL4JA"
+    },
+    {
+      "name": "thread",
+      "value": "1676@WIN-9GE4DGIL4JA.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit4"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    }
+  ],
+  "links": [],
+  "name": "вход через кнопку «Личный кабинет»",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Регистрация пользователя через API: marion.bogisich@hotmail.com",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "user",
+          "value": "User(email=marion.bogisich@hotmail.com, password=cyf6otcjr, name=Carmina)"
+        }
+      ],
+      "start": 1759663016732,
+      "stop": 1759663017023
+    },
+    {
+      "name": "Перейти в Личный Кабинет",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1759663019334,
+      "stop": 1759663019385
+    },
+    {
+      "name": "Заполнить форму авторизации и войти",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Ввести email: marion.bogisich@hotmail.com",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "email",
+              "value": "marion.bogisich@hotmail.com"
+            }
+          ],
+          "start": 1759663019386,
+          "stop": 1759663019441
+        },
+        {
+          "name": "Ввести пароль",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "password",
+              "value": "cyf6otcjr"
+            }
+          ],
+          "start": 1759663019441,
+          "stop": 1759663019477
+        }
+      ],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "marion.bogisich@hotmail.com"
+        },
+        {
+          "name": "password",
+          "value": "cyf6otcjr"
+        }
+      ],
+      "start": 1759663019386,
+      "stop": 1759663019521
+    },
+    {
+      "name": "Проверить успешный вход пользователя: Carmina",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Перейти в Личный Кабинет",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1759663019521,
+          "stop": 1759663019940
+        }
+      ],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "expectedName",
+          "value": "Carmina"
+        }
+      ],
+      "start": 1759663019521,
+      "stop": 1759663020449
+    },
+    {
+      "name": "Удаление пользователя через API",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "accessToken",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTI1M2E4ODJkN2VkMDAxYzUyMGZhYSIsImlhdCI6MTc1OTY2MzAxNiwiZXhwIjoxNzU5NjY0MjE2fQ.4qM0L-wD81rhb4G0v0dVInPUOsGlQPl2m_P6YG7bENk"
+        }
+      ],
+      "start": 1759663020449,
+      "stop": 1759663021105
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1759663016195,
+  "stop": 1759663021213
+}
